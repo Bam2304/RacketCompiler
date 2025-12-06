@@ -92,8 +92,7 @@
     [`(program ,defns ... ,expr)
      `(program ,@(cons `(define (main) ,(h expr)) (map per-defn defns)))]))
 
-;; Needs to be updated to map across definitions (I've done a bit of
-;; this for you) and then to handle the new forms
+
 (define (uniqueify p)
   (define (rename e assignment)
     (match e
